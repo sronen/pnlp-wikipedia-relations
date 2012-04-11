@@ -1,0 +1,8 @@
+# ignore MAC OS X directory info
+*.DS_Store
+
+# ignore compiled Python files
+*.pyc
+
+# ignore huge, uncompressed articles directory
+articles/
