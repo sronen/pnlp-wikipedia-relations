@@ -33,4 +33,15 @@ def chunk_wikitext(text):
                 in_ext_link = True
             elif in_ext_link and ']' in word:
                 in_ext_link = False
+            elif '|' in word and in_link:
+                link_words = []
+            else:
+                if in_link:
+                    link_words.append(word)
+                elif not in_ext_link:
+                    pieces.append(word)
+    return nltk.Tree('S', pieces)
+
+if __name__ == '__main__':
+    a = chunk_wikitext(open('articles/Pigeon_photography.txt').read().decode('utf-8'))
     print unicode(a).encode('utf-8')
