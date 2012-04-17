@@ -5,14 +5,17 @@ import re
 def parse_sent(chunk):
     words = []
     poss = []
+    if 'None' in chunk:
+        words.append('None')
+        return words, poss
     # example:["(u'Father', 'NNP')", "(u'Thomas', 'NNP')"]
     re_paren = r"\(.*?\)"
     parts = re.findall(re_paren, chunk)
     for part in parts:
         #example: (u'Thomas', 'NNP')
-        part = part.strip('()')
-        word, pos = part.split(', ')
-        words.append(word[2:-1])
+        part = part[1:-1]
+        word, pos = part.split('\', ')
+        words.append(word[2:])
         poss.append(pos[1:-1])
     return words, poss
     
@@ -23,31 +26,46 @@ def sent_features(sent):
     # all parts of speech
     # each word in a sentence
     re_bracket = r"\[.*?\]"
-   
-    subj, obj = re.findall(re_bracket, sent)
-
+    features = {}
+    subj = ''
+    obj = ''
+    try:
+        subj, obj = re.findall(re_bracket, sent)
+    except ValueError:
+        print sent
     words1, pos1 = parse_sent(subj)
     
     words2, pos2 = parse_sent(obj)
     
-    features = {}
-    for word in words1+words2:
-        features['contains'+word] = word
-    features['subjpos'] = pos1
-    features['objpos'] = pos2
+    
+    for word in words1:
+        features['subject contains '+word] = word
+    for word in words2:
+        features['object contains '+word] = word
+    features['subjpos'] = tuple(pos1)
+    features['objpos'] = tuple(pos2)
     features['subjCapCount'] = len(filter(lambda x: x.istitle(), words1))
     features['objCapCount'] = len(filter(lambda x:x.istitle(), words2))
+
     return features
 
-good_sents = []
-bad_sents = []
-for line in open('marked_examples.txt', 'r'):
-    sent,tag = line.split('|')
-    if tag == 'good':
-        good_sents.append((sent,'good'))
-    elif tag == 'bad':
-        bad_sents.append((sent,'bad'))
-all_sents = good_sents + bad_sents
-train_set = [sent_features(sent), label) for (sent, label) in all_sents]
+def make_featureset(filename):
+    good_sents = []
+    bad_sents = []
+    for line in open(filename):
+        try:
+            sent,tag = line[:-1].split('||')
+        except ValueError:
+            print line
+            continue
+        if tag =='good':
+            good_sents.append((sent,'good'))
+        elif tag == 'bad':
+            bad_sents.append((sent,'bad'))
+    all_sents = good_sents + bad_sents
+    return [(sent_features(sent), label) for (sent, label) in all_sents]
+
+train_set = make_featureset('output_train.txt')
+test_set = make_featureset('output_test.txt')
 classifier = nltk.NaiveBayesClassifier.train(train_set)
 
