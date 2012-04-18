@@ -1,0 +1,94 @@
+[(u'casualties1', 'NNP')] killed [(u'11', 'CD'), (u'ships', 'NNS')]||bad
+[(u'178', 'CD'), (u'|', 'CD'), (u'casualties2', 'NNP'), (u'=', 'NNP')] killed [(u'Allen', 'NNP'), (u'(', 'NNP')]||bad
+[(u'a', 'DT'), (u'flying', 'NN'), (u'fragment', 'NN')] killed [None]||bad
+[(u'the', 'DT'), (u'United', 'NNP'), (u'States', 'NNPS')] killed [(u'a', 'DT'), (u'large', 'JJ'), (u'male', 'NN'), (u'shot', 'NN')]||bad
+[(u'Deinonychus', 'NNP')] killed [(u'its', 'PRP$'), (u'prey', 'NN')]||good
+[(u'hurricane', 'NN')] killed [(u'17', 'CD'), (u'people', 'NNS')]||good
+[(u'Murrah', 'NNP'), (u'Federal', 'NNP'), (u'Building', 'NNP')] killed [(u'168', 'CD'), (u'people', 'NNS')]||bad
+[(u'this', 'DT'), (u'world', 'NN')] killed [(u'my', 'PRP$'), (u'own', 'JJ'), (u'son', 'NN')] ||bad
+[(u'his', 'PRP$'), (u'henchmen', 'NNS')] killed [(u'Lucrezia', 'NNP')] ||good
+[(u'blue', 'JJ'), (u'whales', 'NNS')] killed [(u'Antarctic', 'NNP'), (u'waters', 'NNS')]||good
+[(u'struck', 'NN')] killed [(u'a', 'DT'), (u'black', 'JJ'), (u'child', 'NN')]||bad
+[(u'"', 'NN')] killed [(u'my', 'PRP$'), (u'amendment', 'NN')]||bad
+[(u'Tanagra', 'NNP')] killed [(u'Ephialtes', 'NNP')]||good
+[(u'Pericles', 'NNP')] killed [(u'Ephialtes', 'NNP')]||good
+[(u'000', 'CD'), (u'buildings', 'NNS')] killed [(u'000', 'CD'), (u'people', 'NNS')]||bad
+[(u'the', 'DT'), (u'news', 'NN')] killed [(u'the', 'DT'), (u'guy', 'NN'), (u'sooner', 'NN')]||bad
+[(u'the', 'DT'), (u'baby', 'NN')] killed [(u'evidence', 'NN')]||bad
+[(u'a', 'DT'), (u'forest', 'NN'), (u'fire', 'NN')] killed [(u'453', 'CD'), (u'people', 'NNS')]||good
+[None] killed [(u'damage', 'NN')]||bad
+[(u'his', 'PRP$'), (u'sword', 'NN')] killed [(u'Aper', 'NNP')]||good
+[(u's', 'NNS'), (u'son', 'NN'), (u'Constantine', 'NNP')] killed [(u'a', 'DT'), (u'Viking', 'NNP'), (u'army', 'NN')]||good
+[(u's', 'NNS'), (u'engine', 'NN'), (u'room', 'NN')] killed [(u'three', 'CD'), (u'crewmen', 'NNS')]||bad
+[(u'their', 'PRP$'), (u'heads', 'NNS')] killed [(u'each', 'DT'), (u'bowl', 'NN')]||bad
+[(u'000', 'CD'), (u'Austrian', 'JJ'), (u'Jews', 'NNS')] killed [(u'the', 'DT'), (u'Holocaust', 'NNP')]||bad
+[(u'Broughton', 'NNP')] killed [(u'a', 'DT'), (u'fight', 'NN')]||bad
+[(u'a', 'DT'), (u'threat', 'NN')] assassinated [(u'the', 'DT'), (u'H\xf2a', 'NNP'), (u'H\u1ea3o', 'NNP'), (u'leaderless', 'NN')]||bad
+[(u'police', 'NN')] killed [(u'student', 'NN'), (u'demonstrators', 'NNS')]||good
+[(u'fire', 'NN')] killed [(u'a', 'DT'), (u'number', 'NN')]||bad
+[(u'The', 'DT'), (u'shooting', 'NN')] killed [(u'several', 'JJ'), (u'people', 'NNS')]||good
+[(u'the', 'DT'), (u'Weiyang', 'NNP'), (u'Palace', 'NNP')] killed [(u'Wang', 'NNP'), (u'Mang', 'NNP')]||bad
+[(u'The', 'DT'), (u'eunuchs', 'NNS')] assassinated [(u'Jin', 'NNP')]||good
+[(u'Cao', 'NNP')] killed [(u'Yuan', 'NNP'), (u'Shao', 'NNP')]||good
+[(u'losses', 'NNS')] killed [(u'the', 'DT'), (u'Battle', 'NNP')]||bad
+[(u'the', 'DT'), (u'other', 'JJ'), (u'brother', 'NN')] murdered [(u'the', 'DT'), (u'Stranger', 'NNP')]||good
+[None] killed [(u'both', 'DT'), (u'guns', 'NNS')]||bad
+[(u'Mysteron', 'NNP'), (u'control', 'NN')] killed [(u'Mysteron', 'NNP'), (u'reconstructions', 'NNS')]||bad
+[(u'this', 'DT'), (u'small', 'JJ'), (u'force', 'NN')] killed [(u'the', 'DT'), (u'besieging', 'NN'), (u'British', 'NNP')]||good
+[(u'The', 'DT'), (u'government', 'NN')] killed [None]||bad
+[(u'the', 'DT'), (u'Chinchina', 'NNP'), (u'River', 'NNP')] killed [(u'800', 'CD'), (u'people', 'NNS')]||good
+[(u'The', 'DT'), (u'government', 'NN')] killed [None]||bad
+[(u'a', 'DT'), (u'landslide', 'NN')] killed [(u'dog', 'NN'), (u'Tray', 'NNP')]||bad
+[(u'the', 'DT'), (u'cliff', 'NN')] killed [(u'a', 'DT'), (u'moment', 'NN')]||bad
+[(u'Washington', 'NNP')] assassinated [(u'president', 'NN')]||bad
+[(u'drivers', 'NNS')] killed [(u'dogs', 'NNS')]||good
+[(u'fact', 'NN')] killed [(u'the', 'DT'), (u'new', 'JJ'), (u'emperor', 'NN')]||bad
+[(u'The', 'DT'), (u'Americans', 'NNPS')] killed [(u'the', 'DT'), (u'operation', 'NN')]||bad
+[(u'April', 'NNP')] killed [(u'1300', 'CD'), (u'people', 'NNS')]||bad
+[(u'Oklahoma', 'NNP'), (u'tornado', 'NN')] killed [(u'36', 'CD'), (u'people', 'NNS')]||good
+[(u'an', 'DT'), (u'F5', 'NNP'), (u'tornado', 'NN')] killed [(u'34', 'CD'), (u'people', 'NNS')]||good
+[(u'obtaining', 'NN'), (u'entry', 'NN')] murdered [(u'the', 'DT'), (u'guard', 'NN')]||bad
+[(u'the', 'DT'), (u'train', 'NN')] killed [None]||bad
+[(u'a', 'DT'), (u'locomotive', 'JJ'), (u'near', 'NN'), (u'Church', 'NNP'), (u'Siding', 'NNP')] killed [(u'The', 'DT'), (u'coroner', 'NN')]||good
+[(u'a', 'DT'), (u'hopeless', 'NN'), (u'Tom', 'NNP')] killed [(u'escape', 'NN')]||bad
+[(u'Haiti', 'NNP')] killed [(u'Haiti', 'NNP')]||bad
+[(u'Ernesto', 'NNP')] killed [(u'five', 'CD'), (u'people', 'NNS')]||good
+[(u'Bergmann', 'NNP')] killed [(u'the', 'DT'), (u'incision', 'NN')]||bad
+[(u'the', 'DT'), (u'vixen', 'NN')] killed [None]||bad
+[(u'a', 'DT'), (u'fox', 'NN')] killed [(u'hounds', 'NNS')]||good
+[(u'the', 'DT'), (u'independent', 'JJ'), (u'lawyer', 'NN'), (u'Abel', 'NNP'), (u'Carvajal', 'NNP')] killed [(u'the', 'DT'), (u'Colonel', 'NNP')]||good
+[(u'the', 'DT'), (u'island', 'NN')] killed [(u'the', 'DT'), (u'Americans', 'NNPS')]||good
+[(u'the', 'DT'), (u'Americans', 'NNPS')] killed [None]||bad
+[(u'the', 'DT'), (u'second', 'JJ'), (u'ridge', 'NN')] killed [None]||bad
+[(u'P', 'NNP'), (u'/', 'NNP'), (u'O', 'NNP'), (u'HP', 'NNP'), (u'Hill', 'NNP')] killed [(u'Dungeness', 'NNP')]||bad
+[(u'Artemis', 'NNP')] killed [(u'The', 'DT'), (u'Bibliotheke', 'NNP')]||bad
+[(u'Artemis', 'NNP')] killed [(u'Orion', 'NNP')]||good
+[(u'Artemis', 'NNP'), (u'Opis', 'NNP')] killed [(u'a', 'DT'), (u'visitor', 'NN')]||good
+[(u'the', 'DT'), (u'Byzantines', 'NNP')] killed [(u'their', 'PRP$'), (u'commanders', 'NNS')]||good
+[(u'a', 'DT'), (u'later', 'JJ'), (u'stop', 'NN')] killed [(u'his', 'PRP$'), (u'girlfriend', 'NN')]||bad
+[(u'their', 'PRP$'), (u'residents', 'NNS')] killed [None]||bad
+[(u'two', 'CD'), (u'men', 'NNS')] killed [(u'others', 'NNS')]||good
+[(u'Sotomayor', 'NNP'), (u'(', 'NNP'), (u'present', 'NN'), (u'day', 'NN'), (u'Aguada', 'NNP')] killed [(u'eighty', 'NN')]||bad
+[(u'Ag\xfceyban\xe1', 'NN'), (u'II', 'NNP')] killed [(u'military', 'JJ'), (u'action', 'NN')]||bad
+[(u'the', 'DT'), (u'44', 'CD'), (u'American', 'NNP'), (u'soldiers', 'NNS')] killed [(u'the', 'DT'), (u'operation', 'NN')]||bad
+[(u'another', 'DT'), (u'child', 'NN')] killed [(u'her', 'PRP$'), (u'third', 'JJ'), (u'child', 'NN')]||good
+[(u'Gary', 'NNP')] killed [(u'the', 'DT'), (u'suggestion', 'NN')]||good
+[(u'|', 'NN'), (u'casualties1', 'NNP'), (u'=', 'NNP'), (u'Almost', 'NNP')] killed [(u'action', 'NN')]||bad
+[(u'Mount', 'NNP'), (u'Garganus', 'NNP')] killed [(u'thirds', 'NNS')]||bad
+[(u'praetor', 'NN'), (u'Quintus', 'NNP'), (u'Arrius', 'NNP')] killed [(u'Crixus', 'NNP')]||good
+[(u'his', 'PRP$'), (u'useless', 'NN'), (u'material', 'NN')] killed [(u'his', 'PRP$'), (u'prisoners', 'NNS')]||bad
+[(u'300', 'CD'), (u'rebels', 'NNS')] killed [None]||bad
+[(u'000', 'CD'), (u'rebel', 'NN'), (u'slaves', 'NNS')] killed [(u'this', 'DT'), (u'final', 'JJ'), (u'action', 'NN')]||bad
+[(u'the', 'DT'), (u'air', 'NN')] killed [(u'Able', 'NNP'), (u'Seaman', 'NNP'), (u'Mitchell', 'NNP')]||bad
+[(u'specimens', 'NNS')] killed [(u'the', 'DT'), (u'wild', 'NN')]||bad
+[(u'Kepler', 'NNP')] murdered [(u'Tycho', 'NNP'), (u'Brahe', 'NNP')]||good
+[(u'the', 'DT'), (u'people', 'NNS')] murdered [None]||bad
+[(u'Allison', 'NNP')] killed [(u'41', 'CD'), (u'people', 'NNS')]||good
+[(u'Allison', 'NNP')] killed [(u'eight', 'CD'), (u'people', 'NNS')]||good
+[(u'an', 'DT'), (u'ensuing', 'NN'), (u'fire', 'NN')] killed [(u'six', 'CD'), (u'people', 'NNS')]||good
+[(u'the', 'DT'), (u'storm', 'NN')] killed [(u'four', 'CD'), (u'Indonesian', 'JJ'), (u'fishermen', 'NNS')]||good
+[(u'the', 'DT'), (u'group', 'NN')] killed [(u'the', 'DT'), (u'survivors', 'NNS')]||good
+[(u'Supervisor', 'NNP'), (u'Harvey', 'NNP'), (u'Milk', 'NNP')] killed [(u'shouts', 'NNS')]||bad
+[(u'those', 'DT'), (u'Persians', 'NNP')] killed [(u'refuge', 'NN')]||bad
+[(u'Sellis', 'NNP')] killed [(u'finding', 'NN'), (u'Ernest', 'NNP')]||bad
+[(u'the', 'DT'), (u'1938', 'CD'), (u'New', 'NNP'), (u'England', 'NNP'), (u'hurricane', 'NN')] killed [(u'564', 'CD'), (u'people', 'NNS')]||good
