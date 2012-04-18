@@ -26,29 +26,35 @@ def parse_sent(chunk):
     return words, poss, tuples, False
     
 def average_wup_similarity(sub_tuples, obj_tuples):
-	'''
-	Get a list of subject tuples and a list of object tuples, and calculate
-	the average wup_similarity for all combinations between them
-	
-	Example formats:
-	sub_words = [('three', 'CD'), ('percent', 'NN')]
+    '''
+    Here for backward compatibility with pre-average_similarity code 
+    '''
+    return average_similarity(wn.wup_similarity, sub_tuples, obj_tuples)
 
-	obj_words = [(').', 'NNP'), ('==', 'NNP'), ('Northern', 'NNP'), ('Virginia', 'NNP'), ('Campaign', 'NNP'), ('==', 'NNP'), ('The', 'NNP'), ('Coast', 'NNP'), ('Division', 'NNP')]
-	
-	'''
-	# get WordNet SynSets for all nouns
-	sub_syn = [wn.synsets(word)[0] for (word, det) in sub_tuples if det.startswith('NN') and len(wn.synsets(word))>0]
-	obj_syn = [wn.synsets(word)[0] for (word, det) in obj_tuples if det.startswith('NN') and len(wn.synsets(word))>0]
+def average_similarity(sim_function, sub_tuples, obj_tuples):
+    '''
+    Get a list of subject tuples and a list of object tuples, and calculate
+    the average similarity of all combinations between them, using the given
+    WordNet similarity function (e.g., wn.wup_similarity)
+    
+    Example formats:
+    sub_words = [('three', 'CD'), ('percent', 'NN')]
+    obj_words = [('Northern', 'NNP'), ('Virginia', 'NNP'), ('Campaign', 'NNP')]
+    
+    '''
+    # get WordNet SynSets for all nouns
+    sub_syn = [wn.synsets(word)[0] for (word, det) in sub_tuples if det.startswith('NN') and len(wn.synsets(word))>0]
+    obj_syn = [wn.synsets(word)[0] for (word, det) in obj_tuples if det.startswith('NN') and len(wn.synsets(word))>0]
 
-	# get all subject-object combinations
-	all_combins_values = [wn.wup_similarity(sub, obj) for sub in sub_syn for obj in obj_syn]
-        # filter out all the None values
-        all_combins_values = filter(lambda x: x is not None, all_combins_values)
-        # it's possible that obj_syn or sub_syn doesnt have a value because some words dont have synsets
-        if len(all_combins_values) == 0:
-            return 0.0
-	# calculate average WUP similarity
-	return sum(all_combins_values) / float(len(all_combins_values))
+    # get all subject-object combinations
+    all_combins_values = [sim_function(sub, obj) for sub in sub_syn for obj in obj_syn]
+    # filter out all the None values
+    all_combins_values = filter(lambda x: x is not None, all_combins_values)
+    # it's possible that obj_syn or sub_syn doesnt have a value because some words dont have synsets
+    if len(all_combins_values) == 0:
+        return 0.0
+    # calculate average WUP similarity
+    return sum(all_combins_values) / float(len(all_combins_values))
 
 def sent_features(sent):
     # example sentence: [(u'having', 'NN')] killed [(u'Father', 'NNP'), (u'Thomas', 'NNP')]
@@ -97,7 +103,7 @@ def make_featureset(filename):
     all_sents = good_sents + bad_sents
     return [(sent_features(sent), label) for (sent, label) in all_sents]
 
-train_set = make_featureset('output_train.txt')
-test_set = make_featureset('output_test.txt')
-classifier = nltk.NaiveBayesClassifier.train(train_set)
+#train_set = make_featureset('output_train.txt')
+#test_set = make_featureset('output_test.txt')
+#classifier = nltk.NaiveBayesClassifier.train(train_set)
 
