@@ -103,7 +103,7 @@ def make_featureset(filename):
     all_sents = good_sents + bad_sents
     return [(sent_features(sent), label) for (sent, label) in all_sents]
 
-#train_set = make_featureset('output_train.txt')
-#test_set = make_featureset('output_test.txt')
-#classifier = nltk.NaiveBayesClassifier.train(train_set)
+train_set = make_featureset('output_train.txt')
+test_set = make_featureset('output_test.txt')
+classifier = nltk.NaiveBayesClassifier.train(train_set)
 
