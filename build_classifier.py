@@ -83,7 +83,8 @@ def sent_features(sent):
     features['objpos'] = tuple(pos2)
     features['subjCapCount'] = len(filter(lambda x: x.istitle(), words1))
     features['objCapCount'] = len(filter(lambda x:x.istitle(), words2))
-    features['wupSimilarity'] = 0 if isNone1 is True or isNone2 is True else average_wup_similarity(tuples1, tuples2)
+    features['wupSimilarity'] = 0 if isNone1 is True or isNone2 is True else average_similarity(wn.wup_similarity, tuples1, tuples2)
+    features['pathSimilarity'] = 0 if isNone1 is True or isNone2 is True else average_similarity(wn.path_similarity, tuples1, tuples2)
     features['wupBin'] = 0 if features['wupSimilarity'] < 0.5 else 1
     return features
 
@@ -106,4 +107,3 @@ def make_featureset(filename):
 train_set = make_featureset('output_train.txt')
 test_set = make_featureset('output_test.txt')
 classifier = nltk.NaiveBayesClassifier.train(train_set)
-
