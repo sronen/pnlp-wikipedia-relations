@@ -19,6 +19,9 @@ def return_indices(lst, verbs):
     return indices
 
 def find_np(tree, reverse=False):
+    ''' 
+    Find noun phrase
+    ''' 
     if reverse:
         itr = reversed(tree)
     else:
@@ -39,6 +42,7 @@ def run_parser(filename):
     grammar = r"""
                NP: {<DT|PRP\$>?<CD>*<JJ.*>*<NN|NN.*>+} # chunk determiner/possessive, adjectives and nouns
                """
+    # Tokenize
     cp = nltk.RegexpParser(grammar)
     sents = []
     try:
@@ -46,10 +50,13 @@ def run_parser(filename):
     except:
         print filename
 
+    # Clean article, pick the sentences that contain desired verbs and tag them
     sents =  map(lambda x:chunk_wikitext(x), sents)
     good_sents = [sent for sent in sents for verb in verbs if verb in sent]
     good_sents_pos = map(lambda x:nltk.pos_tag(x.leaves()), good_sents)
     #print good_sents_pos
+    
+    # Now find the desired verbs and chunk the noun phrases before and after them
     count = 0
     for gsp in good_sents_pos:
         indices = return_indices([t[0] for t in gsp], verbs)
