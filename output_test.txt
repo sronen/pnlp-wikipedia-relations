@@ -7,7 +7,7 @@
 [(u'Murrah', 'NNP'), (u'Federal', 'NNP'), (u'Building', 'NNP')] killed [(u'168', 'CD'), (u'people', 'NNS')]||bad
 [(u'this', 'DT'), (u'world', 'NN')] killed [(u'my', 'PRP$'), (u'own', 'JJ'), (u'son', 'NN')] ||bad
 [(u'his', 'PRP$'), (u'henchmen', 'NNS')] killed [(u'Lucrezia', 'NNP')] ||good
-[(u'blue', 'JJ'), (u'whales', 'NNS')] killed [(u'Antarctic', 'NNP'), (u'waters', 'NNS')]||good
+[(u'blue', 'JJ'), (u'whales', 'NNS')] killed [(u'Antarctic', 'NNP'), (u'waters', 'NNS')]||bad
 [(u'struck', 'NN')] killed [(u'a', 'DT'), (u'black', 'JJ'), (u'child', 'NN')]||bad
 [(u'"', 'NN')] killed [(u'my', 'PRP$'), (u'amendment', 'NN')]||bad
 [(u'Tanagra', 'NNP')] killed [(u'Ephialtes', 'NNP')]||good
